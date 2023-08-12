@@ -34,3 +34,29 @@ const myfunction=function(){
 }
 
 console.log(typeof myObj)
+
+
+
+//*************************memory****************** */
+
+//stack(primitive)  copy of data
+//heap(non primitive)  reference of original value
+
+let myYoutubeChannel="thehiteshchaudhary"
+
+let anothername = myYoutubeChannel
+myYoutubeChannel="chaiaorcode"
+
+console.log(anothername)
+console.log(myYoutubeChannel)
+
+
+let userOne = {
+    email:"user@google.com",
+    upi:"okaxis"
+}
+let userTwo = userOne;
+userTwo.email="ashutosh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
