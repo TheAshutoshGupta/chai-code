@@ -54,15 +54,48 @@
     // how to access them
         users[1].email
 
-        console.log(tinderUser);    // { id: '123abc', name: 'Sammy', isLoggedIn: false }
+        //console.log(tinderUser);    // { id: '123abc', name: 'Sammy', isLoggedIn: false }
 
-        console.log(Object.keys(tinderUser));   // [ 'id', 'name', 'isLoggedIn' ]
+        //console.log(Object.keys(tinderUser));   // [ 'id', 'name', 'isLoggedIn' ]
         /* this returns the value of all kets in array form */
 
-        console.log(Object.values(tinderUser)); //[ '123abc', 'Sammy', false ]
+        //console.log(Object.values(tinderUser)); //[ '123abc', 'Sammy', false ]
         /* this returns the value of all values in array form */
 
-        console.log(Object.entries(tinderUser));    //[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
+        //console.log(Object.entries(tinderUser));    //[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
         /* returns all key value pairs in individual arrays */
 
-        console.log(tinderUser.hasOwnProperty('isLoggedIn'));   /* searches the particular key */
+        //console.log(tinderUser.hasOwnProperty('isLoggedIn'));   /* searches the particular key */
+
+        const course={
+            courseName:"js in hindi",
+            price:"999",
+            courseInstructor:"hitesh"
+        }
+
+        // to access we can use "course.courseInstructor"
+
+            const{courseInstructor}=course
+
+            console.log(courseInstructor)
+
+            const{courseInstructor:instructor}=course
+
+            console.log(instructor);
+
+/* *****************************************API************************** */
+
+    /* it is in the form of object where its name is not defined for example */
+    {
+        "name":"ashu",
+        "age":"21",
+        "address":"ayodhya"
+    }
+    
+    // or
+    [
+        {},
+        {},
+        {}
+    ]
+
