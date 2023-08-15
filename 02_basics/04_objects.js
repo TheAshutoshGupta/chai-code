@@ -86,16 +86,16 @@
 /* *****************************************API************************** */
 
     /* it is in the form of object where its name is not defined for example */
-    {
-        "name":"ashu",
-        "age":"21",
-        "address":"ayodhya"
-    }
+    //{
+    //    "name":"ashu",
+    //    "age":"21",
+    //    "address":"ayodhya"
+    //}
     
     // or
-    [
-        {},
-        {},
-        {}
-    ]
+    //[
+    //    {},
+    //    {},
+    //    {}
+    //]
 
