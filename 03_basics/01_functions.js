@@ -39,7 +39,7 @@
     console.log(loginUserMessage())     //undefined just logged in
 
 
-    
+
     /* we can give default values */
         function loginUserMessage(username="Ashutosh"){
             //this part wont execute ever
@@ -49,3 +49,22 @@
             }
             return `${username} just logged in`
         }
+
+
+// cart problem
+    function calculateCartPrice(...num1)//here it is rest operator
+    {
+        return num1
+    }
+    console.log(calculateCartPrice(200,400,600))
+
+//with objects
+
+    const user={
+        username:"hitesh",
+        price:199
+    }
+    function handleObject(anyObject){
+        console.log( `Username is ${anyObject.username} and price is ${anyObject.price}`);
+    }
+    console.log(handleObject(user))
