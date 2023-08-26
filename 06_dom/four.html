@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aor code</title>
+</head>
+<body style="background-color:black; color:white">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    <script>
+        function addLanguage(langName){
+            const li=document.createElement('Li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)   
+        }
+
+        /* this method is traversing all nodes of the tree which is not optimised */
+        addLanguage("python")
+        addLanguage("typescript")
+
+        function addOptiLanguage(langName){
+            const li= document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLanguage('golang')
+
+        //edit
+        const secondLang=document.querySelector("li:nth-child(3)")
+        const newli=document.createElement('li')
+        newli.textContent="mojo"
+        secondLang.replaceWith(newli)  
+        
+        //edit
+        const firstLang = document.querySelector("li:first-child")
+        firstLang.outerHTML='<li>typeScript</li>'
+
+        //remove
+        const lastlang=document.querySelector('li:last-child')
+        Lastlang.remove()
+    </script>
+</body>
+</html>
