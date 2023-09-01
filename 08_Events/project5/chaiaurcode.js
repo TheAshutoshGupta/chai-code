@@ -27,5 +27,5 @@ start.addEventListener('click',inter)
 
 const stop = document.querySelector('#stop')
 stop.addEventListener('click',()=>{
-    clearInterval(tempo);
+    clearInterval(tempo);//clear interval takes value of setIntervals variable no the function it is comprised of
 });
