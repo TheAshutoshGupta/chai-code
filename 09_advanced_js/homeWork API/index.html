@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrive Data</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper{
+            height:200px;
+            width:250px;
+            margin: 0 auto;
+            margin-top:200px;
+            background-color: rgb(70, 69, 69);
+            border-radius:10px;
+            position: relative;
+
+        }
+        .container{
+            height:100%;
+            width:100%;
+            position:relative;
+        }
+        .picture{
+            height:70px;
+            width:70px;
+            margin:0 auto;
+            transform:translateY(20px);
+            border-radius: 35px;    
+        }
+        .parent{
+            margin:0 auto;
+            width:60%;
+            Transform:translateY(40px);
+            color:white;
+            text-align: center;
+        }
+        .center{
+            margin-bottom: 5px;;
+        }
+
+    </style>
+</head>
+<body style="background-color: #171717">
+    <div class="container">
+        <div class="wrapper">
+            <div class="picture">
+            </div>
+            <div class="parent">
+                <div class="name center">Username
+                </div>
+                <div class="email center">useremail@gmail.com</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let x = document.querySelector('.picture');
+        let y=document.querySelector('.name')
+        let z=document.getElementsByClassName('email');
+
+        const requestURL='https://api.github.com/users/theashutoshgupta';
+        const xhr=new XMLHttpRequest();
+        xhr.open('GET',requestURL)
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===4)
+            {
+                const data=JSON.parse(this.responseText);
+                console.log("ashu")
+
+                y.innerHTML=data.name||"username";
+                z.innerHTML=data.email;
+                x.style.backgroundImage=`url(https://avatars.githubusercontent.com/u/125827121?v=4)`;
+                x.style.backgroundPosition="center center"
+                x.style.backgroundSize="70px"
+            }
+        };
+        xhr.send();
+
+    </script>
+</body>
+</html>
